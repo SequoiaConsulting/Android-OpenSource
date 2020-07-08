@@ -4,8 +4,8 @@ This is an application demonstrating how to achieve two-way communication betwee
 
 # Requirements
 
-Mid sdk version 21
-Build project sing Android Studio
+*Mid sdk version 21
+*Build project sing Android Studio
 
 # Documentation
 
