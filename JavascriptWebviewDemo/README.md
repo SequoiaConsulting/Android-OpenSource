@@ -1,2 +1,4 @@
 # Android-OpenSource
-Here you will find demo projects for different blog posts for Android 
+
+Sample app demonstrating two-way communication between WebApp and Native.
+
