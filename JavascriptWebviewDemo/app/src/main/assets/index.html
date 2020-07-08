@@ -1,0 +1,44 @@
+<html>
+    <head>
+        <script type="text/javascript">
+
+            function getData(userDetails) {
+               if(typeof(userDetails) == 'object') {
+                   var name = userDetails.name || '';
+                   var phoneNumber = userDetails.phoneNumber || '';
+                   var email = userDetails.email || '';
+                   document.getElementById("test").innerHTML = "name = " + name + ", " +
+                                                               "email = " + email + ", " +
+                                                               "phoneNumber = " + phoneNumber;
+                   console.log("getData function exiting " + name + ", " + email + " , " + phoneNumber);
+                   userDetails.name = 'Demo App';
+                   userDetails.email = 'demo@google.com';
+                   userDetails.phoneNumber = 789;
+                   return userDetails;
+               }
+            }
+
+           function setUrlInText(url) {
+              if(typeof(url) == 'string') {
+                   document.getElementById("test").innerHTML = url;
+                   console.log("setUrlInText function entered");
+              }
+           }
+
+            function testSync() {
+                NativeHandler.callApi();
+            }
+
+        </script>
+    </head>
+
+    <body>
+
+    <input type="button" onclick="NativeHandler.callApi()"  style="height:100px; white-space: normal;text-align:left;" value="[JavaScript -> Java] Call api and load url" /><br/>
+
+    <input type="button" onclick="testSync()"  style="height:100px; white-space: normal;text-align:left;" value="[Sync JavaScript -> Java] Call api and load url" /><br/>
+
+    <p id="test" style="overflow-wrap:break-word">Demo App</p>
+
+    </body>
+</html>
